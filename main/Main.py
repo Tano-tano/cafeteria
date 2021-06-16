@@ -1,20 +1,18 @@
 from flask import Flask
+import TodayMenu
+
 app = Flask(__name__)
 @app.route('/')
 def title():
-    return "title"
+    return ""
 
 @app.route('/today')
 def today_menu():
-    return "today"
+    return TodayMenu.main()
 
 @app.route('/week')
 def weekly_menu():
     return "week"
-
-@app.route('/sale')
-def sales_status():
-    return "sale"
 
 @app.route('/sale/change')    
 def sales_change():
@@ -25,4 +23,4 @@ def time_out():
     return "time"
 
 if __name__== "__main__":
-    app.run(debug=True, port=8888, threaded=True)
+    app.run(debug=True, port=8008, threaded=True)
