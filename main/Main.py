@@ -1,5 +1,5 @@
 from flask import Flask
-import TodayMenu
+import c_TodayMenu
 
 app = Flask(__name__)
 @app.route('/')
@@ -8,7 +8,7 @@ def title():
 
 @app.route('/today')
 def today_menu():
-    return TodayMenu.main()
+    return c_TodayMenu.main()
 
 @app.route('/week')
 def weekly_menu():
