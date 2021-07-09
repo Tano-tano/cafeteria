@@ -1,0 +1,64 @@
+<html lang="ja">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  </head>
+
+  <body>
+    
+    <div style="text-align: center;">
+      <div class="text">
+        明石高専<br>食堂システム
+      </div>
+      <a href="/today">
+        <button class="button">本日のメニューを見る</button>
+      </a>
+      <br>
+      <a href="">
+        <button class="button">今週のメニューを見る</button>
+      </a>
+
+
+      <br>
+      <a href="">
+        <button class="button">(DEBUG)時間外エラー</button>
+      </a>
+      <br>
+      <a href="">
+        <button class="button">(DEBUG)変更確認画面</button>
+      </a>
+      
+
+    </div>
+  </body>
+</html>
+
+<script>
+export default {
+  name: 'Top',
+  props: {
+    msg: String
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+</style>
+

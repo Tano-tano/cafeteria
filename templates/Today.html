@@ -1,0 +1,42 @@
+<html lang="ja">
+  <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  </head>
+
+  <body>
+    
+    <div class="center">
+
+    <div style="font-size: 30px;">
+      <h2> 本日のメニュー </h2>
+    </div>
+
+    <div align=center><table border>
+        <tr>
+          <td>Aセット</td>
+          <td><a href="/menu/{{ a.id }}">{{ a.name }}</a><br>
+            {{ a.price }}円
+          </td>
+          <td>
+            在庫あり
+          </td>
+        </tr>
+
+
+      <a href="/">
+        <button class="button">トップ画面に戻る</button>
+      </a>
+    </div>
+
+    <!--<script type="text/javascript" src="{{url_for('static',filename='js/todays_menu_table.js')}}">-->  
+  </body>
+</html>
+
+<script>
+export default {
+  name: 'Today',
+  props: {
+    msg: String
+  }
+}
+</script>
