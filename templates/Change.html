@@ -1,0 +1,25 @@
+<html lang="ja">
+  <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  </head>
+
+  <body class="pages">
+      <button class="back-button" type="button" style="background-color: transparent;" onclick="history.back()">←</button>
+      <a class = "help" href="/">？</a>
+      <div style="text-align:center">    
+      <div class="box">
+      <div style="font-size: 30px;">
+        メニュー名:<p style="font-weight: bolder;">{{menu.name}} </p>の今の在庫状況は?
+      </div>
+
+      <form action="/change/{{menu.id}}/out_of_stock" method="POST">
+              <button class="b_out_of_stock" type="submit" name="out_of_stock" value="0">売り切れ</button>
+              <button class="b_in_stock" type="submit" name="out_of_stock" value="1">在庫あり</button>
+      </form><br>
+      </div>
+      </div>
+  </body>
+
+
+
+</html>

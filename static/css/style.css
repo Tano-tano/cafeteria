@@ -1,0 +1,210 @@
+.help{
+    position: absolute;
+    top:0;
+    right: 0;
+    color:white;
+    font-weight: bolder;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.pages{
+    background-color: #008f6f;
+}
+
+.top_page{
+    background-color: #008f6f;
+}
+
+.center{
+    text-align: center;
+}
+
+div.box{
+    padding-top: 10px;
+    padding-bottom: 20;
+    background-color: rgb(243, 255, 209);
+    margin-top: 20;
+    top:40px;
+}
+
+div.box_top{
+    top:40px;
+    position: relative;
+    padding-top: 20;
+    background-color: #80bd3c;
+}
+
+.back-button{
+    left:0px;
+    top:0px;
+    border: none;  /* 枠線を消す */
+    background-color: transparent;
+    color: white;
+    font:bold;
+    font-size: 30px;
+    outline: none /* クリックしたときに表示される枠線を消す */
+}
+
+.to_today{
+    left: 100px;
+    color: #006f8f;
+    background-color: #eeeeff;
+    border-color: #006f8f;
+    border-radius: 25px;
+    border-width: 5px;
+    min-width: 100px;
+    font: bold;
+    font-size: 35px;
+    font-weight: bolder;
+    padding: 10px;
+    margin-right: auto;
+    margin-bottom: 75px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.to_week{
+    left: 100px;
+    color: #dd6699;
+    background-color: #ffeeee;
+    border-color: #dd6699;
+    border-radius: 25px;
+    border-width: 5px;
+    min-width: 100px;
+    font: bold;
+    font-size: 35px;
+    font-weight: bolder;
+    padding: 10px;
+    margin-right: auto;
+    margin-bottom: 75px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.text{
+    background-color: #eeffaa;
+    width: 250px;
+    padding: 20px;
+    border: 5px
+    double #333333;
+    font-size: 38px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+table thead th{
+    background-color: #dd6699;
+}
+table tbody th{
+    background-color: #dd6699;
+}
+
+table tbody td{
+    background-color: #ffeeee;
+}
+
+table tbody th{
+    background-color: #ffeeee;
+}
+ 
+table {
+    border-collapse:  collapse;     /* セルの線を重ねる */
+    margin: auto;
+}
+
+.cbutton{
+    font-size:30px;
+    color:red;
+    width:50px;
+    height:50px;
+    background:white;
+    border-radius:100%;
+}
+
+.return_to_top{
+    position: relative;
+    top: 10px;
+    font-weight: bolder;
+    bottom: auto;
+    margin: 0;
+    color: #008f6f;
+    background-color: #eeffee;
+    border-radius: 25px;
+    border-color: #008f6f;
+    border-width: 5px;
+    min-width: 100px;
+    font: bold;
+    font-size: 35px;
+}
+
+.product_link{
+    font-size: 30px;
+    color:black;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: white;
+
+}
+
+h2{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.title{
+    position: relative;
+    border-top: 100px;
+    color: rgb(255, 255, 255);
+    background-color: #1177bb;
+    border-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border-width: 5px;
+    min-width: 100px;
+    font: bold;
+    font-weight: bolder;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px;
+}
+
+.b_in_stock{
+    left: 100px;
+    color: white;
+    background-color: #008f6f;
+    border-radius: 25px;
+    min-width: 100px;
+    font: bold;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px;
+    margin-right: auto;
+    margin-bottom: 75px;
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+
+.b_out_of_stock{
+    left: 100px;
+    color: white;
+    background-color: red;
+    border-radius: 25px;
+    min-width: 100px;
+    font: bold;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px;
+    margin-right: auto;
+    margin-bottom: 75px;
+    padding-left: 20px;
+    padding-right: 20px;
+}

@@ -1,0 +1,49 @@
+<html lang="ja">
+  <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <meta name="viewport"
+   content="
+      initial-scale=1.0,
+      minimum-scale=1.0,
+      maximum-scale=2.0,
+      user-scalable=yes" />
+  </head>
+
+  <body class="pages">
+    <button class="back-button" type="button" style="background-color: transparent;" onclick="history.back()">←</button>
+    <a class = "help" href="/">？</a>
+    <div class="box">
+    
+    
+    <div class="center">
+
+      <div class="title" style="font-size: 30px;">
+        <h2> 今週のメニュー </h2>
+      </div>
+
+      <div align=center><table  border>
+        <thead>
+              <th>曜日</th>
+              <th scope="col">Aセット</th>
+              <th scope="col">Bセット</th>         
+        </thead>
+        <tbody>		
+          {%for i in range(5)%}
+          <tr>                    
+            <th>{{days[i]}}</th>
+            <td>{{a[i].name}}</td>
+            <td>{{b[i].name}}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+
+
+      <a href="/">
+        <button align=center class="return_to_top">トップ画面に戻る</button>
+      </a>
+
+    </div>
+    </div>
+  </body>
+</html>

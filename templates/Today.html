@@ -1,0 +1,89 @@
+<html lang="ja">
+  <head>
+    <meta name="viewport"
+   content="
+      initial-scale=1.0,
+      minimum-scale=1.0,
+      maximum-scale=2.0,
+      user-scalable=yes" />  
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  </head>
+	<body class="pages">
+		<button class="back-button" type="button" style="background-color: transparent;" onclick="history.back()">←</button>
+		<a class = "help" href="/">？</a>
+		<div class="box">
+		<div class="center">
+
+			<div class="title" style="font-size: 30px;">
+			<h2> 本日のメニュー </h2>
+			</div>
+
+			<div align=center><table border>
+				<thead>
+					<tr>
+						<th>メニュー名</th>
+						<th>値段</th>
+						<th>販売状況</th>
+					<tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<th>Aセット<br>{{a.name}}</th>
+						<td data-label="価格">{{ a.price }}円</td>
+						<td data-label="販売状況">
+							{% if a.sales_status %}
+								<span class = "in_stock">販売中</span>
+								<a class="product_link" href="/change/{{ a.id }}">✐</a>
+							{% else %}
+								<span class = "out_of_stock">売り切れ</span>
+								<a class="product_link" href="/change/{{ a.id }}">✐</a>
+							{% endif %}  
+						</td>
+					</tr>
+
+					<tr>	
+						<th>Bセット<br>{{b.name}}</th>
+						<td data-label="価格">{{ b.price }}円</td>
+						<td data-label="販売状況">
+							{% if b.sales_status %}
+								<span class = "in_stock">販売中</span>
+								<a class="product_link" href="/change/{{ b.id }}">✐</a>
+							{% else %}
+								<span class = "out_of_stock">売り切れ</span>
+								<a class="product_link" href="/change/{{ b.id }}">✐</a>
+							{% endif %}    
+						</td>
+					</tr>
+						
+
+					{% for menu in p %}
+					<tr>
+						<th>{{menu.name}}</th>
+						<td data-label="価格">{{menu.price}}円</td>
+						<td data-label"販売状況">
+							{% if menu.sales_status %}
+								<span class = "in_stock">販売中</span>
+								<a class="product_link" href="/change/{{ menu.id }}">✐</a>
+							{% else %}
+								<span class = "out_of_stock">売り切れ</span>
+								<a class="product_link" href="/change/{{ menu.id }}">✐</a>
+							{% endif %}  
+						</td>
+					</tr>
+					{% endfor %}
+
+				</tbody>
+			</table></div>
+
+
+			<a href="/">
+				<button class="return_to_top">トップ画面に戻る</button>
+			</a>
+			
+
+		</div>
+		</div>
+	</body>
+
+</html>
