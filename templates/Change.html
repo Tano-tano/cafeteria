@@ -1,11 +1,17 @@
 <html lang="ja">
   <head>
+    <meta name="viewport"
+      content="
+      initial-scale=1.0,
+      minimum-scale=1.0,
+      maximum-scale=2.0,
+      user-scalable=yes" />  
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
   </head>
 
   <body class="pages">
       <button class="back-button" type="button" style="background-color: transparent;" onclick="history.back()">←</button>
-      <a class = "help" href="/">？</a>
+      <a class = "help" href="{{url_for('static', filename='pdf/help.pdf')}}">？</a>
       <div style="text-align:center">    
       <div class="box">
       <div style="font-size: 30px;">

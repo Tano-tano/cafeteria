@@ -32,7 +32,7 @@ div.box_top{
     top:40px;
     position: relative;
     padding-top: 20;
-    background-color: #80bd3c;
+    background: radial-gradient(white,#80bd3c);
 }
 
 .back-button{
@@ -53,9 +53,9 @@ div.box_top{
     border-color: #006f8f;
     border-radius: 25px;
     border-width: 5px;
-    min-width: 100px;
+    min-width: 70px;
     font: bold;
-    font-size: 35px;
+    font-size: 23px;
     font-weight: bolder;
     padding: 10px;
     margin-right: auto;
@@ -71,9 +71,9 @@ div.box_top{
     border-color: #dd6699;
     border-radius: 25px;
     border-width: 5px;
-    min-width: 100px;
+    min-width: 70px;
     font: bold;
-    font-size: 35px;
+    font-size: 23px;
     font-weight: bolder;
     padding: 10px;
     margin-right: auto;
@@ -84,11 +84,11 @@ div.box_top{
 
 .text{
     background-color: #eeffaa;
-    width: 250px;
+    width: 230px;
     padding: 20px;
     border: 5px
     double #333333;
-    font-size: 38px;
+    font-size: 30px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -99,6 +99,16 @@ div.box_top{
 table thead th{
     background-color: #dd6699;
 }
+
+table tbody th.menu_name{
+    color:#008f6f;
+}
+
+table tbody td.price{
+    color:black;
+    padding: 10px;
+}
+
 table tbody th{
     background-color: #dd6699;
 }
@@ -162,18 +172,17 @@ h2{
 
 .title{
     position: relative;
-    border-top: 100px;
+    border-top: 50px;
     color: rgb(255, 255, 255);
     background-color: #1177bb;
     border-color: rgb(255, 255, 255);
     border-radius: 10px;
     border-width: 5px;
     min-width: 100px;
+    font-size: 30px;
     font: bold;
     font-weight: bolder;
     padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
     margin: 20px;
 }
 
@@ -207,4 +216,13 @@ h2{
     margin-bottom: 75px;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.in_stock{
+    text-align: center;
+    padding-right: 15px;
+}
+
+.out_of_stock{
+    text-align: center;
 }

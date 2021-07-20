@@ -10,12 +10,12 @@
   </head>
 	<body class="pages">
 		<button class="back-button" type="button" style="background-color: transparent;" onclick="history.back()">←</button>
-		<a class = "help" href="/">？</a>
+		<a class = "help" href="{{url_for('static', filename='pdf/help.pdf')}}">？</a>
 		<div class="box">
 		<div class="center">
 
 			<div class="title" style="font-size: 30px;">
-			<h2> 本日のメニュー </h2>
+			<h3> 本日のメニュー </h3>
 			</div>
 
 			<div align=center><table border>
@@ -29,28 +29,28 @@
 
 				<tbody>
 					<tr>
-						<th>Aセット<br>{{a.name}}</th>
-						<td data-label="価格">{{ a.price }}円</td>
+						<th class="menu_name">Aセット<br>{{a.name}}</th>
+						<td class="price" data-label="価格">{{ a.price }}円</td>
 						<td data-label="販売状況">
 							{% if a.sales_status %}
 								<span class = "in_stock">販売中</span>
 								<a class="product_link" href="/change/{{ a.id }}">✐</a>
 							{% else %}
-								<span class = "out_of_stock">売り切れ</span>
+								<span class = "out_of_stock">{{a.sold_time}}に<br>売り切れ</span>
 								<a class="product_link" href="/change/{{ a.id }}">✐</a>
 							{% endif %}  
 						</td>
 					</tr>
 
 					<tr>	
-						<th>Bセット<br>{{b.name}}</th>
-						<td data-label="価格">{{ b.price }}円</td>
+						<th class="menu_name">Bセット<br>{{b.name}}</th>
+						<td class="price" data-label="価格">{{ b.price }}円</td>
 						<td data-label="販売状況">
 							{% if b.sales_status %}
 								<span class = "in_stock">販売中</span>
 								<a class="product_link" href="/change/{{ b.id }}">✐</a>
 							{% else %}
-								<span class = "out_of_stock">売り切れ</span>
+								<span class = "out_of_stock">{{b.sold_time}}に<br>売り切れ</span>
 								<a class="product_link" href="/change/{{ b.id }}">✐</a>
 							{% endif %}    
 						</td>
@@ -59,14 +59,14 @@
 
 					{% for menu in p %}
 					<tr>
-						<th>{{menu.name}}</th>
-						<td data-label="価格">{{menu.price}}円</td>
+						<th class="menu_name">{{menu.name}}</th>
+						<td class="price" data-label="価格">{{menu.price}}円</td>
 						<td data-label"販売状況">
 							{% if menu.sales_status %}
 								<span class = "in_stock">販売中</span>
 								<a class="product_link" href="/change/{{ menu.id }}">✐</a>
 							{% else %}
-								<span class = "out_of_stock">売り切れ</span>
+								<span class = "out_of_stock">{{menu.sold_time}}に<br>売り切れ</span>
 								<a class="product_link" href="/change/{{ menu.id }}">✐</a>
 							{% endif %}  
 						</td>
