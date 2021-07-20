@@ -36,7 +36,7 @@
 								<span class = "in_stock">販売中</span>
 								<a class="product_link" href="/change/{{ a.id }}">✐</a>
 							{% else %}
-								<span class = "out_of_stock">{{a.sold_time}}に<br>売り切れ</span>
+								<span class = "out_of_stock">>売り切れ</span>
 								<a class="product_link" href="/change/{{ a.id }}">✐</a>
 							{% endif %}  
 						</td>
@@ -50,7 +50,7 @@
 								<span class = "in_stock">販売中</span>
 								<a class="product_link" href="/change/{{ b.id }}">✐</a>
 							{% else %}
-								<span class = "out_of_stock">{{b.sold_time}}に<br>売り切れ</span>
+								<span class = "out_of_stock">売り切れ</span>
 								<a class="product_link" href="/change/{{ b.id }}">✐</a>
 							{% endif %}    
 						</td>
@@ -66,7 +66,7 @@
 								<span class = "in_stock">販売中</span>
 								<a class="product_link" href="/change/{{ menu.id }}">✐</a>
 							{% else %}
-								<span class = "out_of_stock">{{menu.sold_time}}に<br>売り切れ</span>
+								<span class = "out_of_stock">売り切れ</span>
 								<a class="product_link" href="/change/{{ menu.id }}">✐</a>
 							{% endif %}  
 						</td>
